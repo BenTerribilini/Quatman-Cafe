@@ -31,9 +31,10 @@ nav a {
    list-style-type: none;
    text-decoration: none;
    color: #941706;
+   /* background-color: rgba(182, 182, 182, 0.46); */
    padding: .5rem 1rem;
    border-radius: .75rem;
-   border: 1px solid #3e3e3e;
+   /* border: 1px solid #3e3e3e; */
    width: 100%;
    display: flex;
    flex-direction: row;
@@ -267,8 +268,18 @@ footer p{
    margin-left: 2em;
 }
 
+
+
+
+
+
 /* Media Queries
 ------------------------------------*/
+@media (max-width: 1400px) {
+   .wrapper {
+      width: 70vw;
+   }
+   }
 
 @media (min-width: 1220px) {
    .wrapper {
@@ -278,7 +289,14 @@ footer p{
       background-color: white;
    }
    body {
-      background: linear-gradient(white, #e5dbd2 75%);
+      background-image: url("/images/page-header-img.jpg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      backdrop-filter: blur(7px);
+      padding:2rem 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      background-attachment: fixed;
    }
    footer{
       background-color: white;
@@ -289,18 +307,57 @@ footer p{
    .container-aside {
       display: grid;
    }
+   .hours p{
+      display: none;
    }
-@media (max-width: 1400px) {
-   .wrapper {
-      width: 70vw;
+   .hours {
+      display: grid;
+      position:fixed;
+      top: 40vh;
+      left: 20px;
+      background-color: white;
+      height: 20rem;
+      width: 15rem;
+      grid-template-columns: 1fr;
+      border: none;
+      border-radius: 1rem;
+      text-align: center;
+      }
+   .hours ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   .hours li{
+      margin:0 0rem ;
+      line-height: 1.5rem;
+      /* list-style-type: none; */
+   }
+   .hours li:last-child{
+      display: flex;
+      text-align: center;
+      margin: 0 auto;
+   }
+   .hours h2{
+      text-align:center;
+      margin: 0 0;
+      padding: 0 0;
+      margin-bottom: -2rem;
+   }
+   .desktop-footer {
+      display: flex;
    }
    }
+
 
 @media (max-width: 1220px) {
    .wrapper {
       width: 100vw;
       border: none;
       padding:0 2rem; 
+   }
+   .desktop-footer {
+      display: none;
    }
    }
 
